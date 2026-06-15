@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Cụm công nghiệp Trung Lương 2 - Điểm đến đầu tư công nghiệp mới tại phía Nam tỉnh Ninh Bình. Chủ đầu tư Alpha Corp." />
+  <title>Cụm công nghiệp Trung Lương 2 - Alpha Corp</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: { DEFAULT: '#C8A951', light: '#E2C97A', dark: '#A68B3C' },
+            cream: { DEFAULT: '#F5F0E8', dark: '#E8E0D4' },
+            charcoal: { DEFAULT: '#1A1A1A', light: '#2D2D2D', dark: '#0F0F0F' },
+            forest: { DEFAULT: '#1B3A2F', light: '#2A5242' },
+          },
+          fontFamily: {
+            serif: ['Cormorant Garamond', 'Georgia', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="font-sans text-charcoal bg-cream antialiased">
+
+  <!-- Header -->
+  <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <div class="header-top hidden lg:block bg-charcoal-dark text-cream/70 text-xs py-2">
+      <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+        <span>Điểm đến đầu tư công nghiệp tại phía Nam tỉnh Ninh Bình</span>
+        <span class="text-gold">Công ty Cổ phần Alpha Corp</span>
+      </div>
+    </div>
+    <nav class="nav-bar px-6 py-4">
+      <div class="max-w-7xl mx-auto flex items-center justify-between">
+        <a href="#" class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-gold flex items-center justify-center">
+            <span class="font-serif text-charcoal font-bold text-lg">TL</span>
+          </div>
+          <div class="hidden sm:block">
+            <p class="font-serif text-xl font-semibold text-white leading-tight">Trung Lương 2</p>
+            <p class="text-[10px] text-gold tracking-widest uppercase">Alpha Corp</p>
+          </div>
+        </a>
+
+        <ul class="hidden xl:flex items-center gap-8 text-sm text-white/90">
+          <li><a href="#tong-quan" class="nav-link">Tổng quan</a></li>
+          <li><a href="#nganh-nghe" class="nav-link">Ngành nghề</a></li>
+          <li><a href="#ha-tang" class="nav-link">Hạ tầng</a></li>
+          <li><a href="#vi-tri" class="nav-link">Vị trí</a></li>
+          <li><a href="#loi-ich" class="nav-link">Lợi ích</a></li>
+          <li><a href="#dang-ky" class="nav-link">Liên hệ</a></li>
+        </ul>
+
+        <div class="flex items-center gap-4">
+          <a href="#dang-ky" class="hidden md:inline-flex btn-primary text-sm">Đăng ký tư vấn</a>
+          <button id="menu-toggle" class="xl:hidden text-white p-2" aria-label="Mở menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <div id="mobile-menu" class="mobile-menu xl:hidden">
+      <div class="bg-charcoal-dark/98 backdrop-blur-lg px-6 py-8 space-y-1">
+        <a href="#tong-quan" class="mobile-nav-link">Tổng quan</a>
+        <a href="#nganh-nghe" class="mobile-nav-link">Ngành nghề</a>
+        <a href="#ha-tang" class="mobile-nav-link">Hạ tầng</a>
+        <a href="#vi-tri" class="mobile-nav-link">Vị trí</a>
+        <a href="#loi-ich" class="mobile-nav-link">Lợi ích</a>
+        <a href="#dang-ky" class="mobile-nav-link">Liên hệ</a>
+        <a href="#dang-ky" class="btn-primary w-full text-center mt-4">Đăng ký tư vấn</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="hero" class="relative min-h-screen flex items-end overflow-hidden">
+      <div class="hero-slider absolute inset-0" aria-hidden="true">
+        <div class="hero-slide active">
+          <img src="images/hero/V1.jpg" alt="Cụm công nghiệp Trung Lương 2" />
+        </div>
+        <div class="hero-slide">
+          <img src="images/hero/V2.jpg" alt="Cụm công nghiệp Trung Lương 2" />
+        </div>
+        <div class="hero-slide">
+          <img src="images/hero/V3.jpg" alt="Cụm công nghiệp Trung Lương 2" />
+        </div>
+      </div>
+      <div class="hero-overlay absolute inset-0 pointer-events-none"></div>
+
+      <!-- Slider controls -->
+      <button id="hero-prev" class="hero-nav hero-nav--prev" aria-label="Ảnh trước">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+      </button>
+      <button id="hero-next" class="hero-nav hero-nav--next" aria-label="Ảnh tiếp">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </button>
+      <div id="hero-dots" class="hero-dots" role="tablist" aria-label="Chọn ảnh banner"></div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-6 pb-24 pt-40 w-full">
+        <div class="max-w-3xl reveal">
+          <span class="inline-block text-gold text-sm tracking-[0.3em] uppercase mb-4">Alpha Corp</span>
+          <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl text-white font-medium leading-[1.05] mb-6">
+            Cụm công nghiệp<br /><em class="text-gold not-italic">Trung Lương 2</em>
+          </h1>
+          <p class="text-white/80 text-lg md:text-xl max-w-xl mb-10 leading-relaxed">
+            Điểm đến đầu tư công nghiệp mới tại phía Nam tỉnh Ninh Bình — hạ tầng đồng bộ, đa ngành, phục vụ sản xuất và logistics trong nước & quốc tế.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="#dang-ky" class="btn-primary">Đăng ký đầu tư</a>
+            <a href="#tong-quan" class="btn-outline">Khám phá dự án</a>
+          </div>
+        </div>
+        <!-- <div class="absolute bottom-8 right-6 md:right-12 hidden md:flex flex-col items-center gap-2 text-white/50 text-xs">
+          <span class="tracking-widest uppercase rotate-90 origin-center translate-y-8">Cuộn xuống</span>
+          <div class="scroll-indicator w-px h-16 bg-gradient-to-b from-gold to-transparent"></div>
+        </div> -->
+      </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="bg-charcoal py-12">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4">
+          <div class="stat-item text-center reveal">
+            <p class="font-serif text-5xl md:text-6xl text-gold font-semibold counter" data-target="50">0</p>
+            <p class="text-cream/60 text-sm mt-2 uppercase tracking-wider">Hecta quy mô dự án</p>
+          </div>
+          <div class="stat-item text-center reveal border-y md:border-y-0 md:border-x border-gold/20 py-8 md:py-0">
+            <p class="font-serif text-5xl md:text-6xl text-gold font-semibold"><span class="counter" data-target="632">0</span><span class="text-3xl"> tỷ</span></p>
+            <p class="text-cream/60 text-sm mt-2 uppercase tracking-wider">Tổng mức đầu tư (VNĐ)</p>
+          </div>
+          <div class="stat-item text-center reveal">
+            <p class="font-serif text-5xl md:text-6xl text-gold font-semibold counter" data-target="50">0</p>
+            <p class="text-cream/60 text-sm mt-2 uppercase tracking-wider">Năm hoạt động</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Introduction -->
+    <section id="tong-quan" class="py-24 md:py-32">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div class="reveal">
+            <span class="section-label">Tổng quan dự án</span>
+            <h2 class="section-title mt-4 mb-8">Cụm công nghiệp<br />Trung Lương 2</h2>
+            <div class="tab-group mb-8">
+              <button class="tab-btn active" data-tab="gioi-thieu">Giới thiệu</button>
+              <button class="tab-btn" data-tab="chu-dau-tu">Chủ đầu tư</button>
+            </div>
+            <div id="tab-gioi-thieu" class="tab-content active">
+              <p class="text-charcoal/70 leading-relaxed mb-4">
+                Cụm công nghiệp Trung Lương 2 là dự án đầu tư xây dựng và kinh doanh kết cấu hạ tầng cụm công nghiệp, được định hướng phát triển thành cụm công nghiệp tổng hợp đa ngành với hệ thống hạ tầng kỹ thuật đồng bộ.
+              </p>
+              <p class="text-charcoal/70 leading-relaxed mb-4">
+                Dự án đáp ứng nhu cầu đầu tư sản xuất, chế biến, chế tạo, công nghiệp hỗ trợ, kho bãi và logistics của các doanh nghiệp trong nước và quốc tế. Với vị trí tại xã Bình An, tỉnh Ninh Bình, gần các tuyến giao thông đối ngoại quan trọng, dự án phù hợp cho các nhà máy mở rộng sản xuất hoặc phát triển chuỗi cung ứng tại khu vực phía Nam đồng bằng sông Hồng.
+              </p>
+              <p class="text-charcoal/70 leading-relaxed text-sm">
+                Chấp thuận chủ trương đầu tư theo Quyết định số <strong>1882/QĐ-UBND</strong> ngày 28/6/2025 của UBND tỉnh Hà Nam.
+              </p>
+            </div>
+            <div id="tab-chu-dau-tu" class="tab-content">
+              <p class="text-charcoal/70 leading-relaxed mb-4">
+                <strong>Công ty Cổ phần Alpha Corp</strong> là chủ đầu tư dự án Cụm công nghiệp Trung Lương 2, chịu trách nhiệm đầu tư xây dựng và kinh doanh kết cấu hạ tầng cụm công nghiệp.
+              </p>
+              <p class="text-charcoal/70 leading-relaxed">
+                Với định hướng phát triển hiện đại, đồng bộ và bền vững, Alpha Corp kiến tạo không gian sản xuất hài hòa, thuận tiện và đáp ứng yêu cầu về môi trường, góp phần thu hút vốn đầu tư và tạo việc làm cho lao động địa phương.
+              </p>
+            </div>
+          </div>
+          <div class="relative reveal">
+            <div class="image-frame">
+              <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80" alt="Tổng quan Cụm công nghiệp Trung Lương 2" class="w-full h-[500px] object-cover" />
+            </div>
+            <div class="absolute -bottom-6 -left-6 bg-forest text-cream p-8 max-w-xs shadow-2xl">
+              <p class="text-gold text-sm uppercase tracking-wider mb-2">Thông số dự án</p>
+              <ul class="space-y-2 text-sm text-cream/80">
+                <li class="flex justify-between gap-4"><span>Chủ đầu tư</span><span class="text-white text-right">Alpha Corp</span></li>
+                <li class="flex justify-between gap-4"><span>Diện tích QH</span><span class="text-white">49,74 ha</span></li>
+                <li class="flex justify-between gap-4"><span>Quy mô</span><span class="text-white">~50 ha</span></li>
+                <li class="flex justify-between gap-4"><span>Vị trí</span><span class="text-white text-right">Xã Bình An, Ninh Bình</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Industry Sectors -->
+    <section id="nganh-nghe" class="py-24 md:py-32 bg-charcoal">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16 reveal">
+          <span class="section-label text-gold">Ngành nghề</span>
+          <h2 class="section-title text-white mt-4">Lĩnh vực thu hút<br />đầu tư</h2>
+          <p class="text-cream/50 max-w-2xl mx-auto mt-4 text-sm leading-relaxed">Tập trung vào các ngành công nghiệp chế biến, chế tạo và sản xuất sạch, ít gây ô nhiễm môi trường.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+          <article class="property-card reveal group">
+            <div class="overflow-hidden">
+              <img src="https://mentr-me.com/_next/image?url=https%3A%2F%2Fmentr-me-prod.s3.ap-south-1.amazonaws.com%2Fblogs%2Fmanager-engineer-touch-screen-control-automation-robot%2520%25281%2529.jpg&w=3840&q=75" alt="Cơ khí & Điện tử" class="property-card-img" />
+            </div>
+            <div class="p-8">
+              <span class="text-gold text-xs tracking-widest uppercase">Nhóm 01</span>
+              <h3 class="font-serif text-2xl text-white mt-2 mb-4">Cơ khí & Điện tử</h3>
+              <p class="text-cream/60 text-sm leading-relaxed mb-4">Cơ khí chế tạo, cơ khí lắp ráp; thiết bị điện, điện tử; thiết bị, dụng cụ y tế.</p>
+              <a href="#dang-ky" class="inline-flex items-center gap-2 text-gold text-sm hover:gap-3 transition-all">
+                Tư vấn đầu tư
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </a>
+            </div>
+          </article>
+          <article class="property-card reveal group" style="transition-delay: 0.1s">
+            <div class="overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=600&q=80" alt="Dệt may & Tiêu dùng" class="property-card-img" />
+            </div>
+            <div class="p-8">
+              <span class="text-gold text-xs tracking-widest uppercase">Nhóm 02</span>
+              <h3 class="font-serif text-2xl text-white mt-2 mb-4">Dệt may & Tiêu dùng</h3>
+              <p class="text-cream/60 text-sm leading-relaxed mb-4">Dệt may và sản xuất nguyên phụ liệu; giày dép; chế biến nông sản, thực phẩm; sản xuất hàng tiêu dùng.</p>
+              <a href="#dang-ky" class="inline-flex items-center gap-2 text-gold text-sm hover:gap-3 transition-all">
+                Tư vấn đầu tư
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </a>
+            </div>
+          </article>
+          <article class="property-card reveal group" style="transition-delay: 0.2s">
+            <div class="overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&q=80" alt="Logistics & Hỗ trợ" class="property-card-img" />
+            </div>
+            <div class="p-8">
+              <span class="text-gold text-xs tracking-widest uppercase">Nhóm 03</span>
+              <h3 class="font-serif text-2xl text-white mt-2 mb-4">Logistics & Hỗ trợ</h3>
+              <p class="text-cream/60 text-sm leading-relaxed mb-4">Công nghiệp hỗ trợ; dịch vụ kho bãi và logistics phục vụ hoạt động sản xuất công nghiệp.</p>
+              <a href="#dang-ky" class="inline-flex items-center gap-2 text-gold text-sm hover:gap-3 transition-all">
+                Tư vấn đầu tư
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Infrastructure -->
+    <section id="ha-tang" class="py-24 md:py-32">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid lg:grid-cols-12 gap-12 items-start">
+          <div class="lg:col-span-4 reveal sticky top-32">
+            <span class="section-label">Hạ tầng</span>
+            <h2 class="section-title mt-4 mb-6">Hạ tầng kỹ thuật đồng bộ</h2>
+            <p class="text-charcoal/60 leading-relaxed">Dự án được quy hoạch xây dựng đồng bộ hạ tầng kỹ thuật cụm công nghiệp, bảo đảm không gian sản xuất hài hòa, thuận tiện và đáp ứng yêu cầu về môi trường.</p>
+          </div>
+          <div class="lg:col-span-8 space-y-6">
+            <div class="arch-item reveal flex gap-8 items-start p-8 bg-white shadow-sm hover:shadow-lg transition-shadow">
+              <span class="font-serif text-5xl text-gold/30 font-bold shrink-0">01</span>
+              <div>
+                <h3 class="font-serif text-2xl mb-3">Giao thông nội khu</h3>
+                <p class="text-charcoal/60 leading-relaxed">Hệ thống đường giao thông đồng bộ với tuyến chính lộ giới rộng 49m, kết hợp lòng đường, vỉa hè, dải phân cách và mương nước cảnh quan. Các tuyến nội bộ bảo đảm kết nối giữa các lô đất công nghiệp, khu dịch vụ và hạ tầng kỹ thuật.</p>
+              </div>
+            </div>
+            <div class="arch-item reveal flex gap-8 items-start p-8 bg-white shadow-sm hover:shadow-lg transition-shadow">
+              <span class="font-serif text-5xl text-gold/30 font-bold shrink-0">02</span>
+              <div>
+                <h3 class="font-serif text-2xl mb-3">Hạ tầng kỹ thuật</h3>
+                <p class="text-charcoal/60 leading-relaxed">Hệ thống cấp điện, cấp nước, thoát nước mưa, thoát nước thải và xử lý nước thải tập trung; cùng các công trình dịch vụ phục vụ hoạt động sản xuất công nghiệp.</p>
+              </div>
+            </div>
+            <div class="arch-item reveal flex gap-8 items-start p-8 bg-white shadow-sm hover:shadow-lg transition-shadow">
+              <span class="font-serif text-5xl text-gold/30 font-bold shrink-0">03</span>
+              <div>
+                <h3 class="font-serif text-2xl mb-3">Cảnh quan & Môi trường</h3>
+                <p class="text-charcoal/60 leading-relaxed">Bố trí đất cây xanh, mặt nước và hạ tầng kỹ thuật nhằm bảo đảm không gian sản xuất hài hòa. Quỹ đất công nghiệp được chia thành các lô phù hợp cho nhà máy, kho tàng và dự án công nghiệp phụ trợ.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Location -->
+    <section id="vi-tri" class="py-24 md:py-32 bg-forest text-cream relative overflow-hidden">
+      <div class="relative max-w-7xl mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-16 items-start">
+          <div class="reveal">
+            <span class="section-label text-gold">Vị trí</span>
+            <h2 class="font-serif text-4xl md:text-5xl text-white mt-4 mb-8 leading-tight">Xã Bình An<br />Tỉnh Ninh Bình</h2>
+            <p class="text-cream/70 leading-relaxed mb-6">
+              Cụm công nghiệp Trung Lương 2 có lợi thế kết nối với các tuyến giao thông đối ngoại, nằm gần khu dân cư, khu sản xuất và các nhà máy hiện hữu — thuận lợi cho sản xuất, tuyển dụng lao động, vận chuyển nguyên vật liệu và phân phối hàng hóa.
+            </p>
+            <div class="space-y-3 mb-6 text-sm text-cream/70">
+              <p><strong class="text-gold">Phía Bắc:</strong> QL 21B, Cụm CN Trung Lương 1, KCN Bình Lục</p>
+              <p><strong class="text-gold">Phía Tây:</strong> Đường tỉnh lộ 495B</p>
+              <p><strong class="text-gold">Phía Đông:</strong> Khu dân cư hiện trạng, tuyến đường DT975</p>
+              <p><strong class="text-gold">Phía Nam:</strong> QL 21A, Cụm CN Bình Lục</p>
+            </div>
+            <div class="flex items-center gap-4 p-4 border border-gold/30 bg-charcoal/30">
+              <div class="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center shrink-0">
+                <svg class="w-6 h-6 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              </div>
+              <div>
+                <p class="text-white font-medium">Xã Bình An, Tỉnh Ninh Bình</p>
+                <p class="text-cream/50 text-sm">Quy hoạch chi tiết tỷ lệ 1/500</p>
+              </div>
+            </div>
+          </div>
+          <div class="reveal">
+            <div class="location-map">
+              <img
+                src="images/map/z7939225866767_3af1b862ab3538b424b3f3d5906436a9.jpg"
+                alt="Bản đồ vị trí Cụm công nghiệp Trung Lương 2 — kết nối Hà Nội, Hải Phòng, Nam Định và cao tốc Cầu Giẽ – Ninh Bình"
+                class="location-map-img"
+              />
+            </div>
+            <p class="text-cream/40 text-xs text-center mt-3">Vị trí dự án CCN Trung Lương 2 trên bản đồ khu vực</p>
+          </div>
+        </div>
+
+        <div class="mt-16 reveal">
+          <p class="text-gold text-sm uppercase tracking-wider mb-6 text-center">Kết nối giao thông</p>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+            <div class="location-item">
+              <span class="location-time">15 km</span>
+              <ul class="location-places">
+                <li>Nút giao Vực Vòng — Cao tốc Cầu Giẽ – Ninh Bình</li>
+              </ul>
+            </div>
+            <div class="location-item">
+              <span class="location-time">18 km</span>
+              <ul class="location-places">
+                <li>Thành phố Phủ Lý (~20 phút)</li>
+              </ul>
+            </div>
+            <div class="location-item">
+              <span class="location-time">63 km</span>
+              <ul class="location-places">
+                <li>Trung tâm thủ đô Hà Nội (~45 phút)</li>
+              </ul>
+            </div>
+            <div class="location-item">
+              <span class="location-time">100 km</span>
+              <ul class="location-places">
+                <li>Sân bay quốc tế Nội Bài (~1h45)</li>
+              </ul>
+            </div>
+            <div class="location-item">
+              <span class="location-time">120 km</span>
+              <ul class="location-places">
+                <li>Cảng Hải Phòng (~2h15)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits -->
+    <section id="loi-ich" class="py-24 md:py-32">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16 reveal">
+          <span class="section-label">Lợi ích</span>
+          <h2 class="section-title mt-4">Giá trị đầu tư<br />tại Trung Lương 2</h2>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="amenity-card reveal"><span class="amenity-num">01</span><h3>Hạ tầng đồng bộ</h3><p>Mặt bằng công nghiệp quy mô vừa, hạ tầng kỹ thuật hoàn chỉnh và môi trường đầu tư ổn định.</p></div>
+          <div class="amenity-card reveal"><span class="amenity-num">02</span><h3>Kết nối giao thông</h3><p>Tiếp cận cao tốc, quốc lộ, sân bay và cảng biển — thuận tiện cho logistics và xuất nhập khẩu.</p></div>
+          <div class="amenity-card reveal"><span class="amenity-num">03</span><h3>Nguồn lao động</h3><p>Tiếp cận lực lượng lao động địa phương và các vùng lân cận, gần khu dân cư hiện hữu.</p></div>
+          <div class="amenity-card reveal"><span class="amenity-num">04</span><h3>Đa ngành nghề</h3><p>Phù hợp cơ khí, điện tử, dệt may, chế biến thực phẩm, logistics và công nghiệp hỗ trợ.</p></div>
+          <div class="amenity-card reveal"><span class="amenity-num">05</span><h3>Sản xuất sạch</h3><p>Thu hút các ngành sản xuất sạch, ít gây ô nhiễm, đáp ứng tiêu chuẩn môi trường.</p></div>
+          <div class="amenity-card reveal"><span class="amenity-num">06</span><h3>Phát triển bền vững</h3><p>Góp phần chuyển dịch cơ cấu kinh tế, tạo việc làm và phát triển kinh tế – xã hội địa phương.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="py-24 md:py-32 bg-charcoal">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between mb-12 reveal">
+          <div>
+            <span class="section-label text-gold">Hình ảnh</span>
+            <h2 class="section-title text-white mt-4">Không gian<br />công nghiệp</h2>
+          </div>
+          <p class="text-cream/50 max-w-md mt-4 md:mt-0 text-sm leading-relaxed">Môi trường sản xuất hiện đại, đồng bộ — sẵn sàng đón các doanh nghiệp trong nước và quốc tế.</p>
+        </div>
+        <div class="gallery-grid reveal">
+          <div class="gallery-item gallery-item--large">
+            <img src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=800&q=80" alt="Nhà máy sản xuất" />
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&q=80" alt="Khu công nghiệp" />
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&q=80" alt="Sản xuất công nghiệp" />
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?w=600&q=80" alt="Kho bãi logistics" />
+          </div>
+          <div class="gallery-item gallery-item--wide">
+            <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=900&q=80" alt="Hạ tầng giao thông" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Target Investors -->
+    <section id="dau-tu" class="py-24 md:py-32">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div class="reveal">
+            <span class="section-label">Đối tượng đầu tư</span>
+            <h2 class="section-title mt-4 mb-8">Nhà đầu tư<br />tiềm năng</h2>
+            <p class="text-charcoal/60 leading-relaxed mb-8">
+              Cụm công nghiệp Trung Lương 2 là lựa chọn tiềm năng cho các nhà đầu tư trong nước và quốc tế, đặc biệt các doanh nghiệp đến từ Nhật Bản, Đài Loan, Hàn Quốc và các quốc gia có nhu cầu mở rộng chuỗi cung ứng tại khu vực miền Bắc Việt Nam.
+            </p>
+            <div class="space-y-6">
+              <div class="partner-card">
+                <h4 class="font-serif text-xl mb-2">Doanh nghiệp trong nước</h4>
+                <p class="text-charcoal/60 text-sm leading-relaxed">Các nhà máy có nhu cầu mở rộng sản xuất, xây dựng cơ sở mới hoặc phát triển chuỗi cung ứng tại khu vực phía Nam đồng bằng sông Hồng.</p>
+              </div>
+              <div class="partner-card">
+                <h4 class="font-serif text-xl mb-2">Doanh nghiệp quốc tế</h4>
+                <p class="text-charcoal/60 text-sm leading-relaxed">Đặc biệt phù hợp với doanh nghiệp Nhật Bản, Đài Loan, Hàn Quốc tìm kiếm mặt bằng công nghiệp với hạ tầng đồng bộ và vị trí logistics thuận lợi.</p>
+              </div>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-4 reveal">
+            <div class="partner-logo bg-charcoal p-12 flex items-center justify-center">
+              <span class="font-serif text-xl text-gold text-center">Nhật Bản</span>
+            </div>
+            <div class="partner-logo bg-forest p-12 flex items-center justify-center">
+              <span class="font-serif text-xl text-cream text-center">Đài Loan</span>
+            </div>
+            <div class="partner-logo bg-gold/10 p-12 flex items-center justify-center">
+              <span class="font-serif text-xl text-charcoal text-center">Hàn Quốc</span>
+            </div>
+            <div class="partner-logo bg-charcoal-light p-12 flex items-center justify-center">
+              <span class="font-serif text-xl text-cream text-center">Việt Nam</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA / Contact Form -->
+    <section id="dang-ky" class="py-24 md:py-32 bg-charcoal relative overflow-hidden">
+      <div class="absolute inset-0 opacity-20">
+        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80" alt="" class="w-full h-full object-cover" />
+      </div>
+      <div class="relative max-w-7xl mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div class="reveal">
+            <span class="section-label text-gold">Liên hệ</span>
+            <h2 class="font-serif text-4xl md:text-5xl text-white mt-4 mb-6 leading-tight">Đăng ký tư vấn<br />& Đầu tư</h2>
+            <p class="text-cream/60 leading-relaxed mb-8">
+              Liên hệ Công ty Cổ phần Alpha Corp để được tư vấn về thuê/mua đất công nghiệp, hạ tầng và các điều kiện đầu tư tại Cụm công nghiệp Trung Lương 2.
+            </p>
+            <div id="lien-he" class="space-y-6">
+              <div class="flex gap-4">
+                <div class="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center shrink-0">
+                  <svg class="w-5 h-5 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
+                </div>
+                <div>
+                  <p class="text-white font-medium mb-1">Địa điểm dự án</p>
+                  <p class="text-cream/50 text-sm">Xã Bình An, Tỉnh Ninh Bình</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div class="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center shrink-0">
+                  <svg class="w-5 h-5 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                </div>
+                <div>
+                  <p class="text-white font-medium mb-1">Chủ đầu tư</p>
+                  <p class="text-cream/50 text-sm">Công ty Cổ phần Alpha Corp</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div class="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center shrink-0">
+                  <svg class="w-5 h-5 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                </div>
+                <div>
+                  <p class="text-white font-medium mb-1">Quyết định phê duyệt</p>
+                  <p class="text-cream/50 text-sm">1882/QĐ-UBND ngày 28/6/2025</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="reveal">
+            <form id="contact-form" class="contact-form bg-white/5 backdrop-blur-sm border border-white/10 p-8 md:p-10">
+              <div class="grid sm:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <label for="name" class="form-label">Họ và tên</label>
+                  <input type="text" id="name" name="name" required class="form-input" placeholder="Nguyễn Văn A" />
+                </div>
+                <div>
+                  <label for="phone" class="form-label">Số điện thoại</label>
+                  <input type="tel" id="phone" name="phone" required class="form-input" placeholder="09xx xxx xxx" />
+                </div>
+              </div>
+              <div class="mb-6">
+                <label for="company" class="form-label">Tên doanh nghiệp</label>
+                <input type="text" id="company" name="company" class="form-input" placeholder="Công ty TNHH..." />
+              </div>
+              <div class="mb-6">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="email@company.com" />
+              </div>
+              <div class="mb-6">
+                <label for="industry" class="form-label">Lĩnh vực đầu tư quan tâm</label>
+                <select id="industry" name="industry" class="form-input">
+                  <option value="">-- Chọn lĩnh vực --</option>
+                  <option value="co-khi">Cơ khí chế tạo & lắp ráp</option>
+                  <option value="dien-tu">Thiết bị điện, điện tử</option>
+                  <option value="det-may">Dệt may & nguyên phụ liệu</option>
+                  <option value="thuc-pham">Chế biến nông sản, thực phẩm</option>
+                  <option value="logistics">Kho bãi & Logistics</option>
+                  <option value="khac">Lĩnh vực khác</option>
+                </select>
+              </div>
+              <div class="mb-8">
+                <label for="message" class="form-label">Nội dung</label>
+                <textarea id="message" name="message" rows="3" class="form-input resize-none" placeholder="Nhu cầu diện tích, quy mô sản xuất..."></textarea>
+              </div>
+              <button type="submit" class="btn-primary w-full">Gửi đăng ký</button>
+              <p id="form-success" class="hidden text-gold text-sm text-center mt-4">Cảm ơn bạn! Chúng tôi sẽ liên hệ sớm nhất.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-charcoal-dark text-cream/50 py-12 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-8 mb-12">
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-8 h-8 rounded-full bg-gold flex items-center justify-center">
+              <span class="font-serif text-charcoal font-bold text-sm">TL</span>
+            </div>
+            <span class="font-serif text-xl text-white">Cụm CN Trung Lương 2</span>
+          </div>
+          <p class="text-sm leading-relaxed max-w-sm">Điểm đến đầu tư công nghiệp mới tại phía Nam tỉnh Ninh Bình — Chủ đầu tư Công ty Cổ phần Alpha Corp.</p>
+        </div>
+        <div>
+          <h4 class="text-white text-sm font-medium mb-4 uppercase tracking-wider">Liên kết</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#tong-quan" class="hover:text-gold transition-colors">Tổng quan</a></li>
+            <li><a href="#nganh-nghe" class="hover:text-gold transition-colors">Ngành nghề</a></li>
+            <li><a href="#ha-tang" class="hover:text-gold transition-colors">Hạ tầng</a></li>
+            <li><a href="#vi-tri" class="hover:text-gold transition-colors">Vị trí</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white text-sm font-medium mb-4 uppercase tracking-wider">Thông tin</h4>
+          <ul class="space-y-2 text-sm">
+            <li>Xã Bình An, Ninh Bình</li>
+            <li>Alpha Corp</li>
+            <li>QD 1882/QĐ-UBND</li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+        <p>© Cụm công nghiệp Trung Lương 2 2026. All Rights Reserved.</p>
+        <p>Công ty Cổ phần Alpha Corp</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
